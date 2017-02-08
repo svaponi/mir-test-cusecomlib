@@ -1,0 +1,18 @@
+
+# Eclipse material
+target/
+.settings/
+.classpath
+.project
+
+# File locali
+TODO
+TODOS
+todo
+todos
+draft/
+drafts/
+my.*
+
+# Screenshots
+screenshots/

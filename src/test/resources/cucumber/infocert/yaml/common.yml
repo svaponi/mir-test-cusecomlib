@@ -1,0 +1,84 @@
+################################################################################
+# Teamplate
+################################################################################
+
+product_name: "TESTAMI"
+product_fullname: "Il nuovo prodotto da testare"
+
+# Collezioni di valori statici
+# ==============================================================================
+enums:
+  # Per esempio gli elementi del menu
+  menu:
+    inbox: "Posta in arrivo"
+    acceptance: "Accettazione"
+    warning: "Avviso"
+    delivery: "Consegna"
+    forwarded: "Inoltrata automaticamente"
+    spam: "Posta indesiderata"
+    draft: "Bozze"
+    sent: "Posta inviata"
+    trash: "Cestino"
+  # Testi che identificano un caricaemtno in corso
+  loading:
+    - "In caricamento.."
+    - "loading.."
+    - "Caricamento in corso..."
+
+# Cookies
+# ==============================================================================
+cookies:
+  something: "anything"
+
+# Regular expressions
+# ==============================================================================
+regexp:
+  # da applicare all'url corrente per estrarre il path angular
+  angular_path: "^(.*)#/(.*)$"
+
+# Paths
+# ==============================================================================
+paths:
+  # path angular della pagina di login
+  login: "/login"
+
+
+# Intervalli di pausa
+# ==============================================================================
+times:
+  # Unità di pausa generica, per rendere più liscia l'esecuzione. Esempio: pausa tra una azione e l'altra sul menu (per dare tempo ai dropdown di aprirsi ecc..)
+  smooth:
+    delay: 300
+  # attesa per il caricamento generico, messaggio "In caricamento.." (vedi hook 'loading')
+  loading:
+    delay: 500 # intervallo
+    max_waiting_time: 10000 # tempo massimo
+
+
+
+# Hooks (identificativi usati per agganciare gli elementi della UI)
+# ==============================================================================
+# N.B.
+# il suffisso "_click" indica un "punto caldo" (o "clickable HTML element") sul
+# quale cliccare per invocare una azione
+
+hooks:
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # LOGIN
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # input per inserire le credenziali del login
+  login_username:
+    by: id
+    expr: "user"
+  login_password:
+    by: id
+    expr: "password"
+  # Clickable HTML element per submit-are il login
+  login_click:
+    by: css
+    expr: ".login-btn"
+  # Alert con messaggio di errore del login
+  login_error:
+    by: css
+    expr: ".ice-background-login .alert-danger"
+

@@ -1,0 +1,25 @@
+# dati di prova per simulare unnambiente di collaudo
+url: "http://www.miriade.it/big-data/"
+title: "Big Data | Miriade"
+key1:
+  key2: cl-value2
+  array2:
+    -
+      key3:
+        key4: cl-value4
+    -
+      key3:
+        array4:
+          - "cl-value4A"
+          - "cl-value4B"
+          - "cl-value4C"
+          - "cl-value4D"
+    -
+      key3:
+        array4:
+          - "cl-value4A"
+          - "cl-value4B"
+          - "cl-value4C"
+          - "cl-value4D"
+          - "cl-value4E"
+          - "cl-value4F"
